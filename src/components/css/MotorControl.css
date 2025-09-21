@@ -1,0 +1,118 @@
+.motor-control-panel {
+  background-color: white;
+  color: #212529;
+}
+
+.motor-control-panel h2 {
+  color: #212529;
+  border-bottom-color: #dee2e6;
+}
+
+.motor-control-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.motor-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-width: 200px;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.motor-button:hover:not(:disabled) {
+  background-color: #218838;
+  transform: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.motor-button.off {
+  background-color: #dc3545;
+}
+
+.motor-button.off:hover:not(:disabled) {
+  background-color: #c82333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.motor-button.loading {
+  opacity: 0.6;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.motor-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 6px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.motor-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.status-dot.active {
+  background-color: #28a745;
+}
+
+.status-dot.inactive {
+  background-color: #6c757d;
+}
+
+.status-text {
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #495057;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .motor-button {
+    min-width: 180px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .motor-status-indicator {
+    padding: 6px 12px;
+  }
+} 

@@ -1,0 +1,109 @@
+.sensor-data-container {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.sensor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.sensor-card {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+}
+
+.sensor-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sensor-icon {
+  font-size: 24px;
+  margin-right: 16px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sensor-info {
+  flex: 1;
+}
+
+.sensor-label {
+  font-size: 14px;
+  color: #6c757d;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.sensor-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #212529;
+}
+
+.sensor-value.active {
+  color: #28a745;
+}
+
+.sensor-value.inactive {
+  color: #6c757d;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  color: #721c24;
+}
+
+.error-message span {
+  font-size: 20px;
+  margin-right: 12px;
+}
+
+.error-message p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .sensor-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .sensor-card {
+    padding: 12px;
+  }
+  
+  .sensor-icon {
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    margin-right: 12px;
+  }
+  
+  .sensor-value {
+    font-size: 16px;
+  }
+} 
